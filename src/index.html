@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 + 5 clock</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Share+Tech+Mono|Righteous"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+   
+</head>
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <div class="container-fluid">
+
+        <div class="wrapper">
+            
+            <h1 id="title">25 + 5 Clock</h1> 
+            <div class="upper-wrapper">
+                    
+                <!---BREAK DISPLAY-->
+                <div>
+                    <h4 id="break-label">Break Length</h4>
+                    <button class="btn btn-primary sign" id="break-decrement" onClick="handleBreakLen(event)" value="-">-</button>
+                    <span id="break-length">5</span>
+                    <button class="btn sign" id="break-increment" onClick="handleBreakLen(event)"   value="+">+</button>
+                </div>
+                    
+                    
+                <!---SESSION DISPLAY-->
+                <div >   
+                    <h4 id="session-label">Session Length</h4>
+                    <button class="btn btn-primary sign" id="session-decrement" onClick="handleSessionLen(event)" value="-">-</button>
+                    <span id="session-length">25</span>
+                    <button class="btn btn-primary sign" id="session-increment" onClick="handleSessionLen(event)" value="+">+</button>
+                </div>
+                    
+            <!---TIME LEFT DISPLAY-->
+            </div>
+                <div id="session-container">
+                    <span id="timer-label">Session</span>
+                    <span id="time-left">25:00</span>
+                </div>
+
+                <!---BUTTON DISPLAY-->
+                <div  class="lower-wrapper">
+                    <button class="btn btn-primary" id="start_stop" onClick="start_stop()">start/pause</button>
+                    <button class="btn btn-primary" id="reset" onClick="resetState()">reset</button>
+                </div>
+                <audio id="beep" preload="auto" src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"></audio>
+            </div>
+
+            <!---AUTHOR-->
+            <div id="author"><h6>Designed and Coded by</h6><h5> Mmaboko Tiisetso</h5></div>
+        </div>
+    </div>
+    <script  src="./App.js"></script>
+</body>
+</html>
